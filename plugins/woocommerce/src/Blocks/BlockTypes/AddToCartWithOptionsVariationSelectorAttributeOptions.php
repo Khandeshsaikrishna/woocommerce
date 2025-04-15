@@ -150,13 +150,15 @@ class AddToCartWithOptionsVariationSelectorAttributeOptions extends AbstractBloc
 		$pills = '';
 		foreach ( $attribute_terms as $attribute_term ) {
 			$pills .= sprintf(
-				'<div %s>%s</div>',
+				'<li %s>%s</li>',
 				$this->get_normalized_attributes(
 					array(
 						'role'                       => 'radio',
-						'class'                      => 'wc-block-add-to-cart-with-options-variation-selector-attribute-options__pill',
+						'class'                      => 'wp-element-button wc-block-add-to-cart-with-options-variation-selector-attribute-options__pill is-style-outline',
 						'data-wp-bind--tabindex'     => 'state.pillTabIndex',
 						'data-wp-bind--aria-checked' => 'state.isPillSelected',
+						'data-wp-class--wc-block-add-to-cart-with-options-variation-selector-attribute-options__pill--selected' => 'state.isPillSelected',
+						'data-wp-class--is-style-outline' => '!state.isPillSelected',
 						'data-wp-watch'              => 'callbacks.watchSelected',
 						'data-wp-on--click'          => 'actions.toggleSelected',
 						'data-wp-on--keydown'        => 'actions.handleKeyDown',
@@ -170,7 +172,7 @@ class AddToCartWithOptionsVariationSelectorAttributeOptions extends AbstractBloc
 		}
 
 		return sprintf(
-			'<div %s>%s</div>',
+			'<ul %s>%s</ul>',
 			$this->get_normalized_attributes(
 				array(
 					'class'               => 'wc-block-add-to-cart-with-options-variation-selector-attribute-options__pills',
