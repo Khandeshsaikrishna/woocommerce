@@ -15,11 +15,6 @@ import { useCustomDataContext } from '@woocommerce/shared-context';
 import type { ProductResponseAttributeItem } from '@woocommerce/types';
 import clsx from 'clsx';
 
-/**
- * Internal dependencies
- */
-import { useApplyEditorStyles } from '../../../../shared/hooks/use-theme-colors';
-
 interface Attributes {
 	className?: string;
 	style?: 'pills' | 'dropdown';
