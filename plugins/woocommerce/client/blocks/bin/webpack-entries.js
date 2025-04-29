@@ -207,6 +207,9 @@ const blocks = {
 	'product-review-date': {
 		customDir: 'product-reviews/inner-blocks/review-date',
 	},
+	'product-reviews-pagination': {
+		customDir: 'product-reviews/inner-blocks/reviews-pagination',
+	},
 };
 
 /**
