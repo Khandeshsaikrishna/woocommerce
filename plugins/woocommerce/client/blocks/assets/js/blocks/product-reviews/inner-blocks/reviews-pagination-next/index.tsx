@@ -1,27 +1,26 @@
 /**
- * WordPress dependencies
+ * External dependencies
  */
 import { __ } from '@wordpress/i18n';
 import { queryPaginationNext as icon } from '@wordpress/icons';
+import { registerBlockType } from '@wordpress/blocks';
 
 /**
  * Internal dependencies
  */
-import initBlock from '../utils/init-block';
 import metadata from './block.json';
 import edit from './edit';
 
 const { name } = metadata;
 export { metadata, name };
 
-export const settings = {
+// @ts-expect-error metadata is not typed.
+registerBlockType( metadata, {
 	icon,
 	edit,
 	example: {
 		attributes: {
-			label: __( 'Newer Comments' ),
+			label: __( 'Newer Reviews', 'woocommerce' ),
 		},
 	},
-};
-
-export const init = () => initBlock( { name, metadata, settings } );
+} );

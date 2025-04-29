@@ -551,6 +551,7 @@ final class BlockTypesController {
 			$block_types[] = 'Reviews\ProductReviewForm';
 			$block_types[] = 'Reviews\ProductReviewDate';
 			$block_types[] = 'Reviews\ProductReviewsPagination';
+			$block_types[] = 'Reviews\ProductReviewsPaginationNext';
 		}
 
 		/**

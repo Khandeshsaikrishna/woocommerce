@@ -1,18 +1,18 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "core/comments-pagination-next",
-	"title": "Comments Next Page",
+	"name": "woocommerce/product-reviews-pagination-next",
+	"title": "Product Reviews Next Page",
 	"category": "theme",
-	"parent": [ "core/comments-pagination" ],
-	"description": "Displays the next comment's page link.",
-	"textdomain": "default",
+	"ancestor": [ "woocommerce/product-reviews-pagination" ],
+	"description": "Displays the next product review's page link.",
+	"textdomain": "woocommerce",
 	"attributes": {
 		"label": {
 			"type": "string"
 		}
 	},
-	"usesContext": [ "postId", "comments/paginationArrow" ],
+	"usesContext": [ "postId", "reviews/paginationArrow" ],
 	"supports": {
 		"reusable": false,
 		"html": false,
